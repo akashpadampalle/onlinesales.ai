@@ -11,7 +11,7 @@ JOIN (
     SELECT s.EMP_ID, AVG(s.`AMT (USD)`) AS emp_avg_salary
     FROM salaries s
     GROUP BY s.EMP_ID
-
+    
 ) AS emp_salaries ON e.ID = emp_salaries.EMP_ID
 GROUP BY d.NAME
 ORDER BY AVG_MONTHLY_SALARY DESC
